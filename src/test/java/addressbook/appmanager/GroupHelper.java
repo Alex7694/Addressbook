@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 
 public class GroupHelper extends HelperBase {
 
+
     public GroupHelper(WebDriver driver) {
         super(driver);
     }
@@ -42,5 +43,16 @@ public class GroupHelper extends HelperBase {
 
     public void submitGroupModification() {
         click(By.name("update"));
+    }
+
+    public void createGroup(GroupData group) {
+        initGroupCreation();
+        fillGroupForm(group);
+        submitGroupCreation();
+        returnToGroupPage();
+    }
+
+    public boolean isThereAGroup() {
+        return isElementPresent(By.name("selected[]"));
     }
 }
