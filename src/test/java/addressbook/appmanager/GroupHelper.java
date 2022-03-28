@@ -4,6 +4,8 @@ import addressbook.module.GroupData;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+import java.util.List;
+
 public class GroupHelper extends HelperBase {
 
 
@@ -54,5 +56,9 @@ public class GroupHelper extends HelperBase {
 
     public boolean isThereAGroup() {
         return isElementPresent(By.name("selected[]"));
+    }
+
+    public int getGroupCount() {
+      return   driver.findElements(By.name("selected[]")).size();
     }
 }
