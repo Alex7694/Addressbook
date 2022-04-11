@@ -2,10 +2,7 @@ package addressbook.appmanager;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
-
-
 import java.util.concurrent.TimeUnit;
-
 import static org.testng.Assert.*;
 
 public class ApplicationManager {

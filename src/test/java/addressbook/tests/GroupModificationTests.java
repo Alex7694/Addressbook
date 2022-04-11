@@ -3,13 +3,12 @@ package addressbook.tests;
 import addressbook.module.GroupData;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
 import java.util.HashSet;
 import java.util.List;
 
 public class GroupModificationTests extends TestBase {
 
-    @Test
+    @Test(enabled = true)
     public void testGroupModification() {
         app.getNavigationHelper().goToGroupPage();
         if (!app.getGroupHelper().isThereAGroup()) {

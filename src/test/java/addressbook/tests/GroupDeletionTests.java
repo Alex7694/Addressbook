@@ -3,7 +3,6 @@ package addressbook.tests;
 import addressbook.module.GroupData;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
 import java.util.List;
 
 public class GroupDeletionTests extends TestBase {
@@ -12,7 +11,7 @@ public class GroupDeletionTests extends TestBase {
     public void testGroupDeletion() throws Exception {
         app.getNavigationHelper().goToGroupPage();
         if (!app.getGroupHelper().isThereAGroup()) {
-            app.getGroupHelper().createGroup(new GroupData("test1", "test2", "test3"));
+            app.getGroupHelper().createGroup(new GroupData("test1", null, null));
         }
         List<GroupData> before = app.getGroupHelper().getGroupList();
         app.getGroupHelper().selectGroup(before.size() - 1);
